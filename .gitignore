@@ -1,0 +1,13 @@
+__pycache__/
+.env
+*.pyc
+*.pyo
+*.so
+*.egg-info
+*.dist-info
+*.egg
+*.egg-link
+*.egg-info
+*.egg-info/*
+.venv/
+tree.py

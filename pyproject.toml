@@ -1,0 +1,84 @@
+[tool.poetry]
+name = "fsatapi-example"
+version = "0.1.0"
+description = ""
+authors = ["vyacheslav <skavik46111@gmail.com>"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = {extras = ["httpx"], version = "^0.110.0"}
+motor = "^3.3.2"
+uvicorn = {extras = ["all"], version = "^0.28.0"}
+ipython = "^8.22.2"
+punq = "^0.7.0"
+httpx = "^0.27.0"
+pydantic-settings = "^2.2.1"
+aiokafka = "^0.10.0"
+orjson = "^3.10.0"
+websockets = "^12.0"
+aiojobs = "^1.2.1"
+debugpy = "^1.8.7"
+dishka = "^1.4.2"
+uuid6 = "^2024.7.10"
+black = "^25.1.0"
+email-validator = "^2.2.0"
+alembic = "^1.15.1"
+asyncpg = "^0.30.0"
+
+
+[tool.poetry.group.lint.dependencies]
+isort = "^5.13.2"
+flake8 = "^7.0.0"
+ruff = "^0.4.3"
+pre-commit = "^3.7.0"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.0"
+pytest-asyncio = "^0.23.6"
+faker = "^25.0.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.pyright]
+venvPath = "/home/slavchina/.cache/pypoetry/virtualenvs"
+venv = "fsatapi-example-xpLShB0C-py3.12"
+typeCheckingMode = "basic"
+
+[tool.isort]
+multi_line_output=3
+include_trailing_comma=true
+line_length=120
+lines_after_imports=2
+lines_between_sections=1
+lines_between_types=0
+force_alphabetical_sort_within_sections=true
+ensure_newline_before_comments=true
+combine_as_imports=true
+combine_star=true
+skip_gitignore=true
+balanced_wrapping=true
+force_grid_wrap=2
+src_paths=["core", ]
+skip_glob=[
+    ".git",
+    ".idea",
+    ".vscode",
+    "venv",
+    ".venv",
+]
+known_fastapi=["fastapi","starlette"]
+known_first_party=["application","domain","infra","logic","settings","tests"]
+sections=[
+    "FUTURE",
+    "STDLIB",
+    "FASTAPI",
+    "THIRDPARTY",
+    "FIRSTPARTY",
+    "LOCALFOLDER",
+]
